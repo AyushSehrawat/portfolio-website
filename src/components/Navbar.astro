@@ -1,0 +1,52 @@
+---
+import { Icon } from "astro-icon";
+
+const contact = [
+    {
+        name: "Github",
+        link: "https://github.com/AyushSehrawat",
+    },
+    {
+        name: "Linkedin",
+        link: "https://www.linkedin.com/in/ayushsehrawat",
+    },
+    {
+        name: "Twitter",
+        link: "https://twitter.com/mini5183",
+    },
+    {
+        name: "Discord",
+        link: "https://discordapp.com/users/727365670395838626",
+    },
+];
+---
+
+<header class="w-full p-10 font-varela-round">
+    <nav class="flex justify-between w-full items-center">
+        <div class="px-4 py-2 bg-creamy rounded-xl items-center hidden md:flex">
+            <span class="font-semibold text-chocolatey text-lg cursor-pointer"
+                >About</span
+            >
+        </div>
+        <div class="font-bold text-2xl flex items-center text-chocolatey">
+            AYUSH SEHRAWAT
+        </div>
+        <div class="hidden md:flex gap-2 items-center">
+            {
+                contact.map((item) => (
+                    <a
+                        class="px-4 py-2 bg-creamy flex items-center rounded-xl text-chocolatey"
+                        href={item.link}
+                    >
+                        <Icon name={item.name} height="24" width="24" />
+                    </a>
+                ))
+            }
+        </div>
+        <div
+            class="flex flex-col md:hidden items-center px-4 py-2 bg-creamy rounded-xl text-chocolatey"
+        >
+            <Icon name="Hamburger" height="24" width="24" />
+        </div>
+    </nav>
+</header>

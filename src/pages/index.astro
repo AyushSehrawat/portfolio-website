@@ -1,0 +1,45 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import { Icon } from "astro-icon";
+
+const contact = [
+    {
+        name: "Github",
+        link: "https://github.com/AyushSehrawat",
+    },
+    {
+        name: "Linkedin",
+        link: "https://www.linkedin.com/in/ayushsehrawat",
+    },
+    {
+        name: "Twitter",
+        link: "https://twitter.com/mini5183",
+    },
+    {
+        name: "Discord",
+        link: "https://discordapp.com/users/727365670395838626",
+    },
+];
+---
+
+<Layout title="Ayush Sehrawat">
+    <Navbar />
+    <main
+        class="p-10 flex flex-col items-start font-varela-round text-chocolatey"
+    >
+        <div class="flex items-center gap-8 justify-center w-full">
+            <img src="/mini.webp" class="rounded-3xl w-20 h-20" />
+            <div class="flex flex-col gap-4">
+                <h1 class="text-5xl">
+                    Hi, I'm <span
+                        class="decoration-wavy underline text-creamy bg-chocolatey px-4 py-2 rounded-2xl"
+                        >Ayush</span
+                    >
+                    -
+                </h1>
+                <p class="text-4xl">Full Stack Developer</p>
+            </div>
+        </div>
+    </main>
+</Layout>
