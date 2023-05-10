@@ -9,6 +9,4 @@ import cloudflare from "@astrojs/cloudflare";
 export default defineConfig({
   site: 'https://minidev.me',
   integrations: [tailwind(), compress(), sitemap()],
-  output: "server",
-  adapter: cloudflare()
 });
