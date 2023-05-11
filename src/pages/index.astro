@@ -1,23 +1,27 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
+import {Icon} from "astro-icon"
 ---
 
 <Layout title="Ayush Sehrawat">
     <Navbar />
-    <main
-        class="p-10 flex flex-col items-start font-varela-round text-ctp-text"
-    >
-        <div
-            class="flex items-center gap-8 justify-center w-full fade-in-element"
-        >
-            <img alt="profile-picture" src="/mini.webp" class="rounded-3xl w-28 h-28" />
-            <div class="flex flex-col gap-4">
-                <h1 class="text-5xl">
-                    Hi, I'm <span class="decoration-wavy underline text-ctp-maroon">Ayush</span>
-                    -
-                </h1>
-                <p class="text-4xl text-ctp-subtext1">Full Stack Developer</p>
+    <main class="p-10 flex flex-col items-start font-varela-round text-ctp-text">
+        <div class="flex-row md:flex w-full">
+            <div class="flex items-center gap-8 justify-center w-full md:w-1/2 fade-in-element">
+                <img alt="profile-picture" src="/mini.webp" class="rounded-3xl w-28 h-28" />
+                <div class="flex flex-col gap-4">
+                    <h1 class="text-4xl md:text-5xl">
+                        Hi, I'm <span class="decoration-wavy underline text-ctp-maroon">Ayush</span>
+                        -
+                    </h1>
+                    <p class="text-3xl md:text-4xl text-ctp-subtext1">Full Stack Developer</p>
+                </div>
+            </div>
+            <div class="flex items-center justify-center w-full md:w-1/2">
+                <Icon name="Developer" height="512" width="512"/>
             </div>
         </div>
+
+    </main>
 </Layout>

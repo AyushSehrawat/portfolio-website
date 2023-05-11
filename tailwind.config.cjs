@@ -5,6 +5,7 @@ module.exports = {
         extend: {
             fontFamily: {
                 "varela-round": ["Varela Round", "sans-serif"],
+                "sacramento": ["Sacramento", "cursive"]
             },
         },
     },
