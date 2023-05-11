@@ -1,7 +1,49 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
+import About from "../components/About.astro";
+import Skills from "../components/Skills.astro";
 import { Icon } from "astro-icon";
+
+function calculateDaysUntilBirthday() {
+    var today = new Date();
+    var currentYear = today.getFullYear();
+    var birthday = new Date(currentYear, 0, 18);
+
+    if (
+        today.getMonth() > birthday.getMonth() ||
+        (today.getMonth() === birthday.getMonth() &&
+            today.getDate() >= birthday.getDate())
+    ) {
+        birthday.setFullYear(currentYear + 1);
+    }
+
+    var timeDiff = birthday.getTime() - today.getTime();
+    var daysLeft = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+
+    if (daysLeft > 30) {
+        var monthsLeft = Math.floor(daysLeft / 30);
+        return monthsLeft + " months";
+    } else {
+        return daysLeft + " days";
+    }
+}
+
+function calculateAge() {
+    var today = new Date();
+    var birthdate = new Date(2006, 0, 18);
+
+    var age = today.getFullYear() - birthdate.getFullYear();
+    if (
+        today.getMonth() < birthdate.getMonth() ||
+        (today.getMonth() === birthdate.getMonth() &&
+            today.getDate() < birthdate.getDate())
+    ) {
+        age--;
+    }
+
+    return age;
+}
 ---
 
 <Layout title="Ayush Sehrawat">
@@ -37,17 +79,29 @@ import { Icon } from "astro-icon";
                     </div>
                     <div class="flex gap-2 items-center">
                         <Icon name="Cake" height="24" width="24" />
-                        <p class="">18 January 2005 (17 y/o)</p>
+                        <p class="">
+                            18 January 2006 ({() => calculateAge()} y/o) - {
+                                () => calculateDaysUntilBirthday()
+                            } left
+                        </p>
                     </div>
                     <div class="flex gap-2 items-center">
                         <Icon name="Maps" height="24" width="24" />
                         <p class="">New Delhi, India</p>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <Icon name="Language" height="24" width="24" />
+                        <p class="">English, Hindi</p>
                     </div>
                 </div>
             </div>
             <div class="flex items-center justify-end w-full md:w-1/2">
                 <Icon name="Developer" height="512" width="512" />
             </div>
+        </div>
+        <div class="flex flex-col w-full gap-8 p-10 md:px-24 lg:px-32">
+            <About />
+            <Skills />
         </div>
     </main>
 </Layout>
