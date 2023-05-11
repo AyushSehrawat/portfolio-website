@@ -6,12 +6,12 @@ module.exports = {
             fontFamily: {
                 "varela-round": ["Varela Round", "sans-serif"],
             },
-            colors: {
-                creamy: "#ffc3b4",
-                chocolatey: "#5b413d",
-                primary: "#fcfcf4"
-            },
         },
     },
-    plugins: [],
+    plugins: [
+        require('@catppuccin/tailwindcss')({
+            prefix: 'ctp',
+            defaultFlavour: 'mocha'
+        }),
+    ],
 };
