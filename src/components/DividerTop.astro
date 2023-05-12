@@ -1,0 +1,46 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<div class="hidden lg:flex divider flip">
+    <Icon
+        name="LgDivider"
+        class="relative block w-[calc(100% + 1.3px)] h-[140px] fill-ctp-surface0"
+    />
+</div>
+<div class="hidden md:flex lg:hidden divider flip">
+    <Icon
+        name="MdDivider"
+        class="relative block w-[calc(100% + 1.3px)] h-[140px] fill-ctp-surface0"
+    />
+</div>
+<div class="flex md:hidden divider flip">
+    <Icon
+        name="SmDivider"
+        class="relative block w-[calc(100% + 1.3px)] h-[140px] fill-ctp-surface0"
+    />
+</div>
+
+<style>
+    .flip {
+        transform: rotate(180deg);
+    }
+
+    .divider {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+    }
+
+    .divider svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+    }
+
+    .divider .shape-fill {
+        fill: #313244;
+    }
+</style>

@@ -4,6 +4,8 @@ import Navbar from "../components/Navbar.astro";
 import About from "../components/About.astro";
 import Skills from "../components/Skills.astro";
 import Projects from "../components/Projects.astro";
+import DividerBottom from "../components/DividerBottom.astro";
+import DividerTop from "../components/DividerTop.astro";
 import { Icon } from "astro-icon";
 
 function calculateDaysUntilBirthday() {
@@ -100,77 +102,18 @@ function calculateAge() {
                 <Icon name="Developer" height="512" width="512" />
             </div>
         </div>
-        <div class="divider01">
-            <svg
-                data-name="Layer 1"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 1200 120"
-                preserveAspectRatio="none"
-            >
-                <path
-                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                    class="shape-fill"></path>
-            </svg>
-        </div>
+
+        <DividerTop />
+
         <div class="flex flex-col w-full gap-16 bg-ctp-surface0">
             <About />
             <Skills />
         </div>
-        <div class="divider02">
-            <svg
-                data-name="Layer 1"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 1200 120"
-                preserveAspectRatio="none"
-            >
-                <path
-                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                    class="shape-fill"></path>
-            </svg>
-        </div>
+
+        <DividerBottom />
+
         <div class="flex flex-col gap-8 w-full p-10 md:px-24 lg:px-32">
             <Projects />
         </div>
     </main>
-
-    <style>
-        .divider01 {
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            overflow: hidden;
-            line-height: 0;
-            transform: rotate(180deg);
-        }
-
-        .divider01 svg {
-            position: relative;
-            display: block;
-            width: calc(100% + 1.3px);
-            height: 140px;
-        }
-
-        .divider01 .shape-fill {
-            fill: #313244;
-        }
-
-        .divider02 {
-            top: 0;
-            left: 0;
-            width: 100%;
-            overflow: hidden;
-            line-height: 0;
-        }
-
-        .divider02 svg {
-            position: relative;
-            display: block;
-            width: calc(100% + 1.3px);
-            height: 140px;
-        }
-
-        .divider02 .shape-fill {
-            fill: #313244;
-        }
-    </style>
 </Layout>
