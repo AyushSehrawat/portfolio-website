@@ -1,5 +1,159 @@
 ---
 import { Icon } from "astro-icon";
+
+const languages = [
+    {
+        name: "Python",
+        cls: "devicon-python-plain",
+    },
+    {
+        name: "Javascript",
+        cls: "devicon-javascript-plain",
+    },
+    {
+        name: "C++",
+        cls: "devicon-cplusplus-plain",
+    },
+    {
+        name: "Bash",
+        cls: "devicon-bash-plain",
+    },
+    {
+        name: "HTML5",
+        cls: "devicon-html5-plain",
+    },
+    {
+        name: "CSS3",
+        cls: "devicon-css3-plain",
+    },
+];
+
+const frameworks = [
+    {
+        name: "FastAPI",
+        cls: "devicon-fastapi-plain",
+    },
+    {
+        name: "Flask",
+        cls: "devicon-flask-plain",
+    },
+    {
+        nane: "Svelte",
+        cls: "devicon-svelte-plain",
+    },
+];
+
+const toolsAndTechnologies = [
+    {
+        name: "Docker",
+        cls: "devicon-docker-plain",
+    },
+    {
+        name: "Git",
+        cls: "devicon-git-plain",
+    },
+    {
+        name: "DigitalOcean",
+        cls: "devicon-digitalocean-plain",
+    },
+    {
+        name: "Jetbrains",
+        cls: "devicon-jetbrains-plain",
+    },
+    {
+        name: "Linux",
+        cls: "devicon-linux-plain",
+    },
+    {
+        name: "MongoDB",
+        cls: "devicon-mongodb-plain",
+    },
+    {
+        name: "MySQL",
+        cls: "devicon-mysql-plain",
+    },
+    {
+        name: "Nginx",
+        cls: "devicon-nginx-plain",
+    },
+    {
+        name: "PostgreSQL",
+        cls: "devicon-postgresql-plain",
+    },
+    {
+        name: "TailwindCSS",
+        cls: "devicon-tailwindcss-plain",
+    },
+    {
+        name: "Vim",
+        cls: "devicon-vim-plain",
+    },
+    {
+        name: "VSCode",
+        cls: "devicon-visualstudio-plain",
+    },
+];
 ---
 
 <!-- https://devicon.dev for programming frameworks and tools icons -->
+<div class="flex flex-col md:flex-row w-full items-center gap-8">
+    <div
+        class="flex flex-col items-center md:items-start gap-2 w-full md:w-2/3"
+    >
+        <h1 class="text-3xl md:text-4xl">
+            <span class="text-4xl md:text-5xl text-ctp-maroon">#</span>Skills
+        </h1>
+        <p class="text-ctp-subtext0 text-center md:text-start text-lg">
+            Over the years, I have worked with a variety of programming
+            languages, frameworks, and tools.
+        </p>
+        <div class="flex flex-col items-center md:items-start gap-4">
+            <div
+                class="flex items-center gap-2 text-xl md:text-2xl text-ctp-subtext1"
+            >
+                <Icon name="Terminal" height="24" width="24" />
+                <span>Languages</span>
+            </div>
+            <div class="flex flex-wrap items-center gap-4">
+                {
+                    languages.map(({ name, cls }) => (
+                        <i class={`text-4xl text-ctp-maroon ${cls}`} />
+                    ))
+                }
+            </div>
+
+            <div
+                class="flex items-center gap-2 text-xl md:text-2xl text-ctp-subtext1"
+            >
+                <Icon name="Tools" height="24" width="24" />
+                <span>Frameworks</span>
+            </div>
+            <div class="flex flex-wrap items-center gap-4">
+                {
+                    frameworks.map(({ name, cls }) => (
+                        <i class={`text-4xl text-ctp-maroon ${cls}`} />
+                    ))
+                }
+                <Icon name="Astro" height="40" width="40" />
+            </div>
+            <div
+                class="flex items-center gap-2 text-xl md:text-2xl text-ctp-subtext1"
+            >
+                <Icon name="Hammer" height="24" width="24" />
+                <span>Tools &amp; Technologies</span>
+            </div>
+            <div class="flex flex-wrap items-center gap-4">
+                {
+                    toolsAndTechnologies.map(({ name, cls }) => (
+                        <i class={`text-4xl text-ctp-maroon ${cls}`} />
+                    ))
+                }
+            </div>
+        </div>
+    </div>
+    <div
+        class="flex items-center justify-center md:justify-end w-full md:w-1/3"
+    >
+        <Icon name="Skills" height="360" width="360" />
+    </div>
+</div>
