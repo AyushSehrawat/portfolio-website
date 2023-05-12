@@ -95,8 +95,9 @@ const toolsAndTechnologies = [
 ];
 ---
 
-<!-- https://devicon.dev for programming frameworks and tools icons -->
-<div class="flex flex-col md:flex-row w-full items-center gap-8">
+<div
+    class="flex flex-col md:flex-row w-full items-center gap-8 p-10 md:px-24 lg:px-32 bg-ctp-base"
+>
     <div
         class="flex flex-col items-center md:items-start gap-2 w-full md:w-2/3"
     >
@@ -114,7 +115,9 @@ const toolsAndTechnologies = [
                 <Icon name="Terminal" height="24" width="24" />
                 <span>Languages</span>
             </div>
-            <div class="flex flex-wrap items-center gap-4">
+            <div
+                class="flex flex-wrap items-center justify-center md:justify-start gap-4"
+            >
                 {
                     languages.map(({ name, cls }) => (
                         <i class={`text-4xl text-ctp-maroon ${cls}`} />
@@ -128,7 +131,9 @@ const toolsAndTechnologies = [
                 <Icon name="Tools" height="24" width="24" />
                 <span>Frameworks</span>
             </div>
-            <div class="flex flex-wrap items-center gap-4">
+            <div
+                class="flex flex-wrap items-center justify-center md:justify-start gap-4"
+            >
                 {
                     frameworks.map(({ name, cls }) => (
                         <i class={`text-4xl text-ctp-maroon ${cls}`} />
@@ -142,7 +147,9 @@ const toolsAndTechnologies = [
                 <Icon name="Hammer" height="24" width="24" />
                 <span>Tools &amp; Technologies</span>
             </div>
-            <div class="flex flex-wrap items-center gap-4">
+            <div
+                class="flex flex-wrap items-center justify-center md:justify-start gap-4"
+            >
                 {
                     toolsAndTechnologies.map(({ name, cls }) => (
                         <i class={`text-4xl text-ctp-maroon ${cls}`} />
@@ -154,6 +161,6 @@ const toolsAndTechnologies = [
     <div
         class="flex items-center justify-center md:justify-end w-full md:w-1/3"
     >
-        <Icon name="Skills" height="360" width="360" />
+        <Icon name="Skills" />
     </div>
 </div>
